@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import {v4 as uuidv4} from 'uuid';
+    // import {v4 as uuidv4} from 'uuid';
 
     export default {
         name: "AddTodo",
@@ -22,7 +22,6 @@
                 // prevent the form from actually submitting
                 e.preventDefault();
                 const newTodo = {
-                    id: uuidv4(),
                     title: this.title,
                     completed: false
                 }
