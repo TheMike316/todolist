@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <Header/>
-        <AddTodo/>
+        <AddTodo @add-todo="addTodo"/>
         <Todos :todos="todos" @del-todo="deleteTodo"/>
     </div>
 </template>
@@ -42,6 +42,9 @@
         methods: {
             deleteTodo(id) {
                 this.todos = this.todos.filter(t => t.id !== id);
+            },
+            addTodo(newTodo) {
+                this.todos = [...this.todos, newTodo];
             }
         }
     }
